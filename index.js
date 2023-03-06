@@ -11,6 +11,16 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+function titleCased() {
+  return tutorials.map((tutorial) => {
+    let words = tutorial.split(' ');
+    let titles = words.map((word) => word[0].toUpperCase()+word.slice(1));
+    return titles.join(' ');
+    console.log(titles);
+
+  })
 }
+
+//after capitalized first letter of each word, I want to concantenate the rest of the word
+//Afer that, join the entire array of words 
+//return words.map
